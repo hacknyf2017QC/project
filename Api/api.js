@@ -1,7 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var user = require('./model/user');
-var car = require('./model/vehicle);
+
+var mongoose = require('mongoose');
+var passport = require('passport');
+var localStra = require('passport-local').Strategy;
+
+
+var user = require('./model/userModel');
+var car = require('./model/vehicleModel');
+
         /*************** API ******************/
         router.route('/user/signup').post(function (req, res) {
             user.create({
@@ -10,7 +17,7 @@ var car = require('./model/vehicle);
                 , lastName: req.body.lastName
                 , email: req.body.email
                 , password: req.body.password
-                , signUpDate: req.body.signUpDate;
+                , signUpDate: req.body.signUpDate
             }, function (err, data) {
                 res.send(err);
             });
@@ -23,8 +30,8 @@ var car = require('./model/vehicle);
                make:    req.body.make,
                model:   req.body.model,
                year:    req.body.year,
-               lic: req.body.lic,
-               state: req.body.state;
+               lic:     req.body.lic,
+               state: req.body.state
                
                
            },function(err,data){
@@ -32,9 +39,11 @@ var car = require('./model/vehicle);
            }); 
             
         });
+        
 
+        
 
-
+        router.route('/user/login').post
 
 
 
