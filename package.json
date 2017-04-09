@@ -1,0 +1,25 @@
+{
+  "name": "car",
+  "version": "1.0.0",
+  "description": "application created for hackNys 2017",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacknyf2017QC/project.git"
+  },
+  "keywords": [
+    "car",
+    "report",
+    "good",
+    "citizen"
+  ],
+  "author": "kevin reinoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hacknyf2017QC/project/issues"
+  },
+  "homepage": "https://github.com/hacknyf2017QC/project#readme"
+}
